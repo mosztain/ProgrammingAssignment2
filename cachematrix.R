@@ -2,9 +2,11 @@
 ## functions do
 
 ## Write a short comment describing this function
+## This function will define the get and set operators
+## for matrix 'x' and its inverse 'v'
 
 makeCacheMatrix <- function(x = matrix()) {
-    m <- NULL
+    v <- NULL
     set <- function(y) {
         x <<- y
         v <<- NULL
@@ -19,6 +21,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+## This function will check for the existance of the
+## inverse matrix 'v' as a cached variable and return
+## it.  If 'v' does not exist (is NULL) it will calculate
+## the inverse of 'x' using the solve function and then 
+## assign its result to 'v'
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
